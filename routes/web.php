@@ -26,4 +26,5 @@ Route::get('/table', function () {
 
 });
 
-Route::get('/table/{number?}', 'TableController@create')→where('number', '[0-9]+');
+Route::get('/table/{number?}', 'TableController@create');
+Route::resource('book', 'BookController');
