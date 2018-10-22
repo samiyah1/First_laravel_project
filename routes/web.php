@@ -26,12 +26,4 @@ Route::get('/table', function () {
 
 });
 
-Route::get('/table/{number}', function ($number) {
-
-   for($i =1; $i <= 10 ; $i++){
-
-       echo "$i * $number = ". $i* $number ."<br>";
-
-   }
-
-});
+Route::get('/table/{number?}', 'TableController@create')→where('number', '[0-9]+');
